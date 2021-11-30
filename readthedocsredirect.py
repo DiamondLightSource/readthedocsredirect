@@ -42,6 +42,14 @@ assert response.ok, response.json()
 
 # Setup a redirect
 response = requests.post(
+    f"https://readthedocs.org/api/v3/projects/{args.project}/redirects/",
+    json=dict(from_url="/en/latest/$rest", to_url=github, type="exact"),
+    headers=HEADERS,
+)
+assert response.ok, response.json()
+
+# Trigger a build
+response = requests.post(
     f"https://readthedocs.org/api/v3/projects/{args.project}/versions/latest/builds/",
     headers=HEADERS,
 )
