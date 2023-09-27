@@ -31,6 +31,7 @@ assert response.ok, response.json()
 data = response.json()
 del data["language"]
 del data["programming_language"]
+data["default_branch"] = args.project
 data["repository"]["url"] = "https://github.com/dls-controls/readthedocsredirect"
 data["homepage"] = github
 response = requests.patch(
