@@ -1,5 +1,5 @@
 .. raw:: html
 
     <script type="text/javascript">
-        window.location.replace('https://<organization>.github.io/<project>');
+        window.location.replace('https://pandablocks.github.io/PandABlocks-client');
     </script>
