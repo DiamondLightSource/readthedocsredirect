@@ -12,8 +12,8 @@ parser.add_argument(
 )
 parser.add_argument(
     "--org",
-    help="Name of the organization name on GitHub, defaults to dls-controls",
-    default="dls-controls",
+    help="Name of the organization name on GitHub, defaults to DiamondLightSource",
+    default="DiamondLightSource",
 )
 args = parser.parse_args()
 
@@ -36,7 +36,7 @@ class Redirecter:
     def link_project_to_github(self):
         data= {
             "default_branch": self.project,
-            "repository": {"url":  "https://github.com/dls-controls/readthedocsredirect"},
+            "repository": {"url":  "https://github.com/DiamondLightSource/readthedocsredirect"},
             "homepage": self.github_url,
         }
 
